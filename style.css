@@ -1,6 +1,13 @@
 body {
     background: #4d91ff;
     color: white;
+    background-image: url('ramadan-kareem-mubarak_1112477-49.avif');
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: contain;
+}
+.link{
+    color: red;
 }
 
 .box {
@@ -38,6 +45,7 @@ body {
 .score1 {
     background-color: rgba(17, 249, 0, 0.505);
 }
-#bonusScore{
+
+#bonusScore {
     font-size: 100px;
 }
