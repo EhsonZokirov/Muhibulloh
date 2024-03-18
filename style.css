@@ -1,5 +1,6 @@
 body {
     background: #307dfa;
+    color: white;
 }
 
 .box {
@@ -30,11 +31,12 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    color: white;
     background-color: red;
 }
 
 .score1 {
-    background-color: rgb(17, 249, 0);
+    background-color: rgba(17, 249, 0, 0.505);
 }
 #bonusScore{
     font-size: 100px;
