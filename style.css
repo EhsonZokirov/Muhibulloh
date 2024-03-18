@@ -1,34 +1,41 @@
 body {
-  background-color: grey;
-}
-.body {
-  text-align: center;
-  padding-top: 10%;
-}
-#count {
-  font-size: 100px;
-  text-align: center;
-  display: block;
+    background: #307dfa;
 }
 
-#plusButton {
-  font-size: 30px;
-  width: 150px;
-  height: 20vh;
-  cursor: pointer;
-}
-#plusButton:active {
-  /* font-size: 25px; */
-  width: 145px;
+.box {
+    /* background-color: brown; */
+    text-align: center;
 }
 
-#minusButton {
-  font-size: 30px;
-  width: 50px;
+.btns button {
+    margin: 100px 0px 0px 0px;
 }
-#resetButton {
-  font-size: 14px;
-  cursor: pointer;
-  background-color: seagreen;
-  width: 40px;
+
+.btns {
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+    align-items: end;
+
+}
+
+#increaseScoreButton {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(16, 172, 16);
+}
+
+#resetBonusScoreButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.score1 {
+    background-color: rgb(17, 249, 0);
+}
+#bonusScore{
+    font-size: 100px;
 }
