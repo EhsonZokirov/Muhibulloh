@@ -3,18 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tasbeh</title>
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <link rel="stylesheet" href="style.css" />
   <body>
-    <div class="body">
-      <label id="count">0</label>
-      <br />
-      <img id="plusButton" src="IMG_7204 (2).PNG" alt="ehsonsho" /> <br />
-      <button id="resetButton">c</button>
-      <label id="count2">0</label>
+    <div class="box">
+      <h1>Tasbih_ru</h1>
+      <p></p>
+      <p class="score1">Количество: <br> <span id="bonusScore">0</span></p>
+      <div class="btns">
+        <button id="resetBonusScoreButton">reset</button>
+        <button id="increaseScoreButton"></button>
+      </div>
+      <p>Общий счёт: <span id="totalScore">0</span></p>
     </div>
-    
-    <script src="js.js"></script>
+
+    <script>
+      let totalScore = parseInt(localStorage.getItem("totalScore")) || 0;
+      let bonusScore = parseInt(localStorage.getItem("bonusScore")) || 0;
+      const totalScoreDisplay = document.getElementById("totalScore");
+      const bonusScoreDisplay = document.getElementById("bonusScore");
+      const increaseScoreButton = document.getElementById(
+        "increaseScoreButton"
+      );
+      const resetBonusScoreButton = document.getElementById(
+        "resetBonusScoreButton"
+      );
+
+      totalScoreDisplay.textContent = totalScore;
+      bonusScoreDisplay.textContent = bonusScore;
+
+      increaseScoreButton.addEventListener("click", function () {
+        totalScore++;
+        bonusScore++;
+        totalScoreDisplay.textContent = totalScore;
+        bonusScoreDisplay.textContent = bonusScore;
+        localStorage.setItem("totalScore", totalScore);
+        localStorage.setItem("bonusScore", bonusScore);
+      });
+
+      resetBonusScoreButton.addEventListener("click", function () {
+        bonusScore = 0;
+        bonusScoreDisplay.textContent = bonusScore;
+        localStorage.setItem("bonusScore", bonusScore);
+      });
+    </script>
   </body>
 </html>
